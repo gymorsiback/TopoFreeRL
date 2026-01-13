@@ -13,9 +13,14 @@
 
 ## Abstract
 
-This repository is the official implementation of **TopoFreeRL**, a novel scheduling framework designed for **Mixture-of-Experts (MoE)** inference in geo-distributed edge-cloud environments. 
+**TopoFreeRL** is a lightweight, high-performance reinforcement learning framework designed for real-time **LLM serving** and **MoE inference** in edge-cloud networks.
 
-TopoFreeRL addresses the critical challenge of routing complex, multi-step inference workflows across heterogeneous servers with unstable network connections. By integrating **spatiotemporal awareness** into the reinforcement learning state space and employing **Dynamic Weight Adjustment (DWA)**, TopoFreeRL achieves a superior balance between latency, inference cost, and service reliability, specifically robustness against "network traps" (high-latency links).
+While Graph Neural Networks (GNNs) are powerful, they are often too computationally expensive for real-time decision-making on the edge. TopoFreeRL solves this by introducing a **"Graph-Free" perception module** that efficiently captures critical network bottlenecks without the heavy overhead of GNNs.
+
+### Key Highlights
+* **Ultra-Fast Decision Making**: Replaces complex message-passing with a linear-complexity **Squeeze-and-Excitation attention mechanism**, enabling scalable, real-time scheduling even under bursty traffic.
+* **Dynamic Adaptation**: Features a **Dynamic Weight Adaptation (DWA)** mechanism that autonomously adjusts optimization priorities to navigate unstable, non-stationary network environments.
+* **State-of-the-Art Performance**: Significantly outperforms existing baselines, reducing network transmission costs by **97.0%** and boosting inference efficiency by **24.4%**, all while maintaining robust performance in unseen environments.
 
 ---
 
