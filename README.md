@@ -11,7 +11,7 @@
 
 ---
 
-## 📝 Abstract
+## Abstract
 
 This repository is the official implementation of **TopoFreeRL**, a novel scheduling framework designed for **Mixture-of-Experts (MoE)** inference in geo-distributed edge-cloud environments. 
 
@@ -19,13 +19,13 @@ TopoFreeRL addresses the critical challenge of routing complex, multi-step infer
 
 ---
 
-## 🚀 News
+## News
 
 - Code and sample dataset (Server1_Trap) released.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -45,7 +45,7 @@ TopoFreeRL addresses the critical challenge of routing complex, multi-step infer
 
 ---
 
-## 💾 Dataset: Edge-Cloud MoE Bench
+## Dataset: Edge-Cloud MoE Bench
 
 We introduce a high-fidelity benchmark dataset for edge-cloud MoE inference scheduling. 
 
@@ -65,7 +65,7 @@ We provide the **`Server1_Trap` (500 servers)** scale as a sample for reproducib
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -80,7 +80,7 @@ We provide the **`Server1_Trap` (500 servers)** scale as a sample for reproducib
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Training
 
@@ -124,7 +124,7 @@ python total/plot_all_comparison.py
 
 ---
 
-## 📊 Results
+## Results
 
 Our method consistently outperforms baselines in terms of reward, latency, and cost efficiency, especially in "Trap" environments.
 
@@ -132,7 +132,7 @@ Our method consistently outperforms baselines in terms of reward, latency, and c
 
 ---
 
-## 📧 Contact
+## Contact
 
 For any questions regarding the code or to request the **full dataset**, please email:  
 **gymorsiback@tju.edu.cn**
