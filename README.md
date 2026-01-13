@@ -24,6 +24,37 @@ TopoFreeRL addresses the critical challenge of routing complex, multi-step infer
 - Code and sample dataset (Server1_Trap) released.
 
 ---
+## TopoFreeRL at a Glance
+
+Although Graph Neural Networks (GNNs) can capture structural information for routing/scheduling in large-scale LLM serving, their message-passing inference introduces non-trivial runtime overhead, which becomes prohibitive for real-time edge decision-making under bursty traffic. **TopoFreeRL** is a **graph-free** reinforcement learning approach that preserves **topology awareness** while maintaining **low-latency** control.
+
+### Key Ideas
+
+**(1) Graph-Free Perception with Preference-Gated SE Attention.**  
+Instead of message passing on dynamic graphs, TopoFreeRL directly consumes raw telemetry and applies a lightweight **preference-gated Squeeze-and-Excitation (SE)** attention module to amplify bottleneck-related channels with **linear complexity**, effectively avoiding GNN scalability limits.
+
+**(2) Dynamic Weight Adaptation (DWA) for Non-Stationary Pareto Navigation.**  
+To track the Pareto frontier under time-varying workloads, TopoFreeRL introduces **Dynamic Weight Adaptation (DWA)**, which autonomously recalibrates multi-objective preferences using **entropy-regularized metric drift**, improving stability and robustness without manual retuning.
+
+**(3) Strong Efficiency and Generalization.**  
+Across large-scale heterogeneous topologies derived from real-world traces, TopoFreeRL delivers substantial system-level gains: **97.0% lower network transmission costs** and **24.4% higher comprehensive inference efficiency**, while preserving **zero-shot generalization** with **<10% degradation** in unseen hyperscale environments.
+
+---
+
+## Training Curves (Examples)
+
+> Replace the image paths below with your repository paths (e.g., `assets/figs/...`).
+
+<p align="center">
+  <img src="assets/figs/train_return.png" width="32%" alt="Training return / objective improvement" />
+  <img src="assets/figs/train_entropy.png" width="32%" alt="Policy entropy / exploration dynamics" />
+  <img src="assets/figs/train_dwa_weights.png" width="32%" alt="Dynamic Weight Adaptation (DWA) weights over time" />
+</p>
+
+**Figure A — Objective improvement / return.** Demonstrates convergence behavior and overall optimization progress during training.  
+**Figure B — Exploration dynamics (entropy or KL).** Highlights stable exploration and learning dynamics under bursty traffic.  
+**Figure C — DWA preference weights.** Visualizes how DWA automatically shifts optimization priorities (e.g., latency vs. cost vs. risk) in response to non-stationary metric drift.
+
 
 ## Project Structure
 
