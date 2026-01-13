@@ -46,9 +46,9 @@ Across large-scale heterogeneous topologies derived from real-world traces, Topo
 > Replace the image paths below with your repository paths (e.g., `assets/figs/...`).
 
 <p align="center">
-  <img src="assets/figs/train_return.png" width="32%" alt="Training return / objective improvement" />
-  <img src="assets/figs/train_entropy.png" width="32%" alt="Policy entropy / exploration dynamics" />
-  <img src="assets/figs/train_dwa_weights.png" width="32%" alt="Dynamic Weight Adaptation (DWA) weights over time" />
+  <img src="results/Fig1(a) Comparison_Reward.png" width="32%" alt="Training return / objective improvement" />
+  <img src="results/Fig1(b) Comparison_Latency.png" width="32%" alt="Policy entropy / exploration dynamics" />
+  <img src="results/Fig1(c) Comparison_Cost.png" width="32%" alt="Dynamic Weight Adaptation (DWA) weights over time" />
 </p>
 
 **Figure A — Objective improvement / return.** Demonstrates convergence behavior and overall optimization progress during training.  
