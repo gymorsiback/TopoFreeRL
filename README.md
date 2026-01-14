@@ -97,7 +97,6 @@ We provide the **`Server1_Trap` (500 servers)** scale as a sample for reproducib
 
 > **Note**: The full dataset includes larger scales (1000 and 2000 servers) with varying densities and trap configurations. Due to the size and commercial value of the full topology data, only the sample is open-sourced. 
 >
-> Researchers requiring the **complete dataset** for comparison benchmarks should contact: **gymorsiback@tju.edu.cn**
 
 ---
 
