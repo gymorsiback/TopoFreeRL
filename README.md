@@ -1,6 +1,6 @@
 <div align="center">
 
-# TopoFreeRL: Topology-Free Reinforcement Learning for Distributed LLM Inference
+# GF-TopoRL: Topology-Free Reinforcement Learning for Distributed LLM Inference
 
 <!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,9 +13,9 @@
 
 ## Abstract
 
-**TopoFreeRL** is a lightweight, high-performance reinforcement learning framework designed for real-time **LLM serving** and **MoE inference** in edge-cloud networks.
+**GF-TopoRL** is a lightweight, high-performance reinforcement learning framework designed for real-time **LLM serving** and **MoE inference** in edge-cloud networks.
 
-While Graph Neural Networks (GNNs) are powerful, they are often too computationally expensive for real-time decision-making on the edge. TopoFreeRL solves this by introducing a **"Graph-Free" perception module** that efficiently captures critical network bottlenecks without the heavy overhead of GNNs.
+While Graph Neural Networks (GNNs) are powerful, they are often too computationally expensive for real-time decision-making on the edge. GF-TopoRL solves this by introducing a **"Graph-Free" perception module** that efficiently captures critical network bottlenecks without the heavy overhead of GNNs.
 
 ### Key Highlights
 * **Ultra-Fast Decision Making**: Replaces complex message-passing with a linear-complexity **Squeeze-and-Excitation attention mechanism**, enabling scalable, real-time scheduling even under bursty traffic.
@@ -29,20 +29,20 @@ While Graph Neural Networks (GNNs) are powerful, they are often too computationa
 - Code and sample dataset (Server1_Trap) released.
 
 ---
-## TopoFreeRL at a Glance
+## GF-TopoRL at a Glance
 
-Although Graph Neural Networks (GNNs) can capture structural information for routing/scheduling in large-scale LLM serving, their message-passing inference introduces non-trivial runtime overhead, which becomes prohibitive for real-time edge decision-making under bursty traffic. **TopoFreeRL** is a **graph-free** reinforcement learning approach that preserves **topology awareness** while maintaining **low-latency** control.
+Although Graph Neural Networks (GNNs) can capture structural information for routing/scheduling in large-scale LLM serving, their message-passing inference introduces non-trivial runtime overhead, which becomes prohibitive for real-time edge decision-making under bursty traffic. **GF-TopoRL** is a **graph-free** reinforcement learning approach that preserves **topology awareness** while maintaining **low-latency** control.
 
 ### Key Ideas
 
 **(1) Graph-Free Perception with Preference-Gated SE Attention.**  
-Instead of message passing on dynamic graphs, TopoFreeRL directly consumes raw telemetry and applies a lightweight **preference-gated Squeeze-and-Excitation (SE)** attention module to amplify bottleneck-related channels with **linear complexity**, effectively avoiding GNN scalability limits.
+Instead of message passing on dynamic graphs, GF-TopoRL directly consumes raw telemetry and applies a lightweight **preference-gated Squeeze-and-Excitation (SE)** attention module to amplify bottleneck-related channels with **linear complexity**, effectively avoiding GNN scalability limits.
 
 **(2) Dynamic Weight Adaptation (DWA) for Non-Stationary Pareto Navigation.**  
-To track the Pareto frontier under time-varying workloads, TopoFreeRL introduces **Dynamic Weight Adaptation (DWA)**, which autonomously recalibrates multi-objective preferences using **entropy-regularized metric drift**, improving stability and robustness without manual retuning.
+To track the Pareto frontier under time-varying workloads, GF-TopoRL introduces **Dynamic Weight Adaptation (DWA)**, which autonomously recalibrates multi-objective preferences using **entropy-regularized metric drift**, improving stability and robustness without manual retuning.
 
 **(3) Strong Efficiency and Generalization.**  
-Across large-scale heterogeneous topologies derived from real-world traces, TopoFreeRL delivers substantial system-level gains: **97.0% lower network transmission costs** and **24.4% higher comprehensive inference efficiency**, while preserving **zero-shot generalization** with **<10% degradation** in unseen hyperscale environments.
+Across large-scale heterogeneous topologies derived from real-world traces, GF-TopoRL delivers substantial system-level gains: **97.0% lower network transmission costs** and **24.4% higher comprehensive inference efficiency**, while preserving **zero-shot generalization** with **<10% degradation** in unseen hyperscale environments.
 
 ---
 
@@ -65,7 +65,7 @@ Across large-scale heterogeneous topologies derived from real-world traces, Topo
 
 ```
 .
-├── TopoFreeRL/             # [Ours] TopoFreeRL Algorithm Implementation
+├── GF-TopoRL/             # [Ours] GF-TopoRL Algorithm Implementation
 │   ├── agent.py            # PPO Agent with Spatiotemporal Awareness
 │   ├── model.py            # Actor-Critic Networks
 │   └── train.py            # Training Loop
@@ -104,8 +104,8 @@ We provide the **`Server1_Trap` (500 servers)** scale as a sample for reproducib
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/anonymous/TopoFreeRL.git
-   cd TopoFreeRL
+   git clone https://github.com/anonymous/GF-TopoRL.git
+   cd GF-TopoRL
    ```
 
 2. **Install dependencies**
@@ -119,10 +119,10 @@ We provide the **`Server1_Trap` (500 servers)** scale as a sample for reproducib
 
 ### 1. Training
 
-To train TopoFreeRL on the provided sample dataset:
+To train GF-TopoRL on the provided sample dataset:
 
 ```bash
-python TopoFreeRL/train.py \
+python GF-TopoRL/train.py \
     --data data1 \
     --regions Server1_Trap \
     --epochs 100 \
@@ -141,10 +141,10 @@ python PFAPPO/train.py --data data1 --regions Server1_Trap --epochs 100
 Load the trained model to evaluate performance:
 
 ```bash
-python TopoFreeRL/inference.py \
+python GF-TopoRL/inference.py \
     --data data1 \
     --region Server1_Trap \
-    --model results/TopoFreeRL/models/LATEST_Server1_Trap_seed42_final.pt \
+    --model results/GF-TopoRL/models/LATEST_Server1_Trap_seed42_final.pt \
     --episodes 500
 ```
 
