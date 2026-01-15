@@ -13,7 +13,7 @@
 
 ## Abstract
 
-**GF-TopoRL** is a lightweight, high-performance reinforcement learning framework designed for real-time **LLM serving** and **MoE inference** in edge-cloud networks.
+**GF-TopoRL** is a lightweight, high-performance reinforcement learning framework designed for real-time **LLM serving** and **MoE inference** in edge-cloud networks. Naming note: GF-TopoRL (formerly TopoFreeRL in earlier versions) is an original algorithm proposed by the authors of this repository; the two names refer to the same method throughout the codebase and documentation.
 
 While Graph Neural Networks (GNNs) are powerful, they are often too computationally expensive for real-time decision-making on the edge. GF-TopoRL solves this by introducing a **"Graph-Free" perception module** that efficiently captures critical network bottlenecks without the heavy overhead of GNNs.
 
